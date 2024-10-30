@@ -1,7 +1,7 @@
-const fetchVideo = require("./redux/fetures/videos/thunk/fetchVideo")
-const store = require("./redux/store")
+const fetchRelatedVideos = require("./redux/fetures/videos/thunk/fetchRelatedVidos");
+const fetchVideo = require("./redux/fetures/videos/thunk/fetchVideo");
+const store = require("./redux/store");
 
+store.subscribe(() => store.getState());
 
-store.subscribe(()=>console.log(store.getState()))
-
-store.dispatch(fetchVideo())
+store.dispatch(fetchRelatedVideos());
